@@ -1,0 +1,14 @@
+<%= stylesheet_link_tag "table" %>
+<div class = h1>Вариант №15<br></div>
+<div class = center>
+<%= form_with url:"/rk/view.json", method: :get, id:"numbers_form", local: false do |form| %>
+  <div class = form>
+    <%= form.label :num, 'До какого числа искать счастливые?'%><br>
+    <%= form.text_field :num, value: "10"%>
+  </div>
+  <div class = form>
+    <%= form.submit "Добавить число" %>
+  </div>
+<% end %>
+</div>
+<div id="result"></div>
